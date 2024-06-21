@@ -1,0 +1,951 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Добавляем box-sizing: border-box для правильного расчета размеров */
+}
+
+
+body{
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: sans-serif; /* Добавляем шрифт для улучшения читабельности */
+
+}
+
+/* Фильтр */
+.filter{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+
+}
+.filter-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000000000;
+    display: none; /* Initially hidden */
+}
+
+.container{
+    display: flex;
+    justify-content: end;
+}
+
+.filter_layout{
+
+    justify-content: end;
+    height: 100vh;
+    width: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+    overflow-x: auto;
+    overflow-y: auto;
+    z-index: 10000;
+    display: flex;
+
+}
+.bed_value:hover{
+    background-color: lightgrey;
+}
+.bath_value:hover{
+    background-color: lightgrey;
+}
+.filter_layout_vision{
+    background-color: white;
+    width: 35%;
+    z-index: 9999;
+    padding: 20px; /* Добавляем отступы для контента */
+    position: relative;
+    top:0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+
+
+}
+
+.close_filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #001A72;
+    margin: 10px 10px 0px 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.filter_close{
+    display: block;
+    cursor: pointer;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    border: 0.5px solid lightgrey;
+    background:none;
+}
+.filter_close:hover{
+    background-color: #ffffff;
+}
+
+.filter_title{
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+.filter_btn{
+    display: flex;
+    align-items: center;
+    width: 40%;
+
+}
+
+
+
+
+
+.data_block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.filter_price, .filter_Sq{
+    margin: 20px; /* Изменяем отступы для адаптивности */
+    padding-top: 10px;
+}
+
+/* Секция данных */
+#filter_data {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    padding: 0px 50px 0px 50px;
+
+    /* Добавляем отступы между элементами */
+}
+.data{
+    margin: 0px 20px 0px 20px;
+}
+
+.data_card_img img{
+    width: 100%; /* Задаем ширину изображения в процентах для адаптивности */
+    height: 205px;/* Автоматически регулируем высоту, чтобы сохранить пропорции изображения */
+    border-radius: 10px;
+
+}
+
+.data_card{
+
+    border-radius: 10px;
+    width: 100%; /* Задаем ширину в процентах для адаптивности */
+
+}
+
+
+
+.data_card a{
+    text-decoration: none;
+
+}
+
+.global_data{
+    margin: 10px 5px;
+}
+.global_data span{
+    color: black;
+}
+
+.data_card_location span{
+    font-size: 14px !important ; /* Уменьшаем размер шрифта */
+    font-weight: bold;
+}
+
+
+
+.data_card_price span{
+    font-size: 16px !important; /* Уменьшаем размер шрифта */
+    font-weight: 900;
+
+}
+
+.allData span{
+    font-size: 12px !important ; /* Уменьшаем размер шрифта */
+    font-weight: 600;
+}
+
+/* Слайдеры */
+
+.filter_beds, .filter_bath{
+    padding-top: 10px;
+}
+.filter_area{
+    margin-top: 30px;
+}
+
+.filter__slider_bed{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+.bed_value.active{
+    background-color: rgb(0,26,114,1);
+    color: white;
+}
+.bath_value.active{
+    background-color: rgb(0,26,114,1);
+    color: white;
+}
+
+
+
+.filter__slider_bed button{
+    background: none;
+    border: 0.5px solid lightgrey;
+    padding: 5px;
+}
+.filter__slider_bed .first{
+    border-radius: 10px 0px 0px 10px;
+}
+.filter__slider_bed .last{
+    border-radius: 0px 10px 10px 0px;
+}
+
+
+
+.filter__slider_bath{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+}
+.filter__slider_bath button{
+    background: none;
+    border: 0.5px solid lightgrey;
+    padding: 5px;
+}
+.filter__slider_bath .first{
+    border-radius: 10px 0px 0px 10px;
+}
+.filter__slider_bath .last{
+    border-radius: 0px 10px 10px 0px;
+}
+
+
+
+.filter_layout_vision_block{
+    position: relative; /* Створіть контейнер для кнопки */
+}
+
+
+
+
+
+
+
+
+
+.submit_slider{
+    position: sticky; /* Фиксированное позиционирование */
+    bottom: 0; /* Прижимаем к низу */
+    left: 0;
+    right: 0;/* Растягиваем по всей ширине */
+    width: 100%; /* Занимаем всю ширину */
+    height: 100px;
+    display: flex;
+    justify-content: center; /* Выравнивание по центру */
+    align-items: center; /* Выравнивание по центру */
+    background-color: white;
+    z-index: 100; /* Гарантируем, что кнопка всегда будет сверху */
+    padding: 0;
+    margin: 0;
+}
+
+
+.submit_slider button{
+    width: 100%; /* Уменьшаем ширину кнопок */
+    height: auto; /* Уменьшаем высоту кнопок */
+    border-radius: 15px;
+
+
+}
+
+.reset{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    border: 0.5px solid lightgrey;
+    background: none;
+    margin-right: 5px;
+}
+.reset:hover{
+    color: #1768d6;
+    border: 0.5px solid black;
+    transition: all 0.5s linear;
+}
+
+.submit{
+    background-color: rgb(0,26,114,1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    color: #dbd9d9;
+    font-size: 18px; /* Уменьшаем размер шрифта */
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+}
+.submit img{
+    height:15px
+}
+
+
+
+
+/* Медиа запросы для адаптивности */
+@media (max-width: 768px) {
+    /* Изменяем ширину секции фильтра на мобильных устройствах */
+
+
+    /* Изменяем размер шрифта для секции данных */
+    .data_card_location span{
+        font-size: 14px;
+    }
+
+    .data_card_price span{
+        font-size: 16px;
+    }
+
+    .allData span{
+        font-size: 12px;
+    }
+
+    /* Устанавливаем flex-direction для слайдеров на мобильных устройствах */
+    .filter__slider_bed, .filter__slider_bath{
+        flex-direction: column;
+    }
+}
+
+.submit_slider button{
+    width: 100%; /* Уменьшаем ширину кнопок */
+    height: auto; /* Уменьшаем высоту кнопок */
+    border-radius: 15px;
+
+}
+
+@media (max-width:545px){
+
+    .filter__slider_bed, .filter__slider_bath{
+
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:464px){
+    #filter_data{
+        grid-template-columns: 1fr;
+    }
+    .filter__slider_bed, .filter__slider_bath{
+
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:418px){
+    #filter_data{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:369px){
+
+    .filter__slider_bed, .filter__slider_bath{
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+@media (max-width:1000px){
+    #filter_data{
+
+        width:100%;
+        gap: 5px;
+        padding: 0px 70px 0px 40px;
+
+    }
+    .filter_layout_vision{
+        width: 50%;
+    }
+    .data{
+        width:100%;
+    }
+    .data_card{
+        display: flex;
+
+
+
+    }
+
+    #filter_data img{
+        width:100%;
+        height: 150px;
+    }
+    .submit_slider{
+        position: sticky; /* Зафіксуйте кнопку */
+        display: flex;
+        bottom: -20px; /* Відступ від низу */
+        z-index: 100; /* Гарантуйте, що кнопка завжди знаходиться зверху */
+        background-color: white;
+
+
+
+    }
+
+}
+
+
+
+
+
+.page-link{
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.filter_btn_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 5px 0px 100px ;
+}
+.filter_title span{
+    font-weight: 800;
+    font-style: normal;
+    color: rgb(8, 58, 130);
+    text-decoration: none;
+    font-size: 26px !important;
+    line-height: 41px;
+    letter-spacing: 0em;
+}
+.filter_area_title span{
+    font-weight: 800;
+    font-style: normal;
+    color: rgb(8, 58, 130);
+    text-decoration: none;
+    font-size: 16px !important;
+    line-height: 41px;
+    letter-spacing: 0em;
+}
+.filter_type_title span{
+    font-weight: 800;
+    font-style: normal;
+    color: rgb(8, 58, 130);
+    text-decoration: none;
+    font-size: 16px !important;
+    line-height: 16px;
+    letter-spacing: 0em;
+}
+.filter_title_beds span{
+    font-weight: 800;
+    font-style: normal;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 41px;
+    letter-spacing: 0em;
+}
+.filter_title_bath{
+    font-weight: 800;
+    font-style: normal;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 41px;
+    letter-spacing: 0em;
+}
+
+.filter_btn select{
+    width: 150.606px;
+    height: 40px;
+    margin: 15px;
+    border: 0.5px solid lightgrey;
+}
+.filter_btn{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 50px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+.filter_open{
+    padding: 12px 2px;
+    background-color: white;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 0.5px solid lightgrey;
+    width: 30%;
+}
+.filter_open:hover{
+    transition: all 0.5s linear;
+    box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.filter_open img{
+    margin-left: 15px;
+    height: 20px;
+
+}
+/**Filter Type**/
+.dropBtn button{
+    width: 100%;
+    padding: 2px 20px;
+    border: 0.5px solid lightgrey;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+
+}
+.drop img{
+    border: 0.5px solid lightgrey;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+.Drop{
+    border: 0.5px solid lightgrey;
+    margin-top: 5px;
+    border-radius: 5px;
+    height: 0px;
+    overflow: hidden;
+    display: none;
+
+}
+
+.DropValue{
+    background: none;
+    border: none;
+    color:rgb(8, 58, 130);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: 600;
+    width: 100%;
+}
+.priceMinMax{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 5px 0px 5px;
+}
+.priceMinMax span{
+    font-weight: 900;
+    font-size: 14px;
+    color: rgb(8, 58, 130);
+}
+.dropAreaBtn img{
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid lightgrey;
+    padding: 10px;
+    border-radius: 20px;
+}
+.DropArea{
+    border: 0.5px solid lightgrey;
+    margin-top: 5px;
+    border-radius: 5px;
+    height: 0px;
+    overflow: hidden;
+    display: none;
+}
+.DropValueArea{
+    background: none;
+    border: none;
+    color:rgb(8, 58, 130);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: 600;
+    width: 100%;
+}
+.dt{
+    padding: 0px 0px;
+}
+
+#sort {
+    display: block;
+    max-width: 215px;
+    width: 100%;
+    position: relative;
+}
+.filt option{
+    position: relative;
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+    cursor: pointer;
+    user-select: none;
+}
+.valArea{
+    display: flex;
+}
+
+@media (max-width: 1440px) {
+
+}
+@media (max-width: 765px) {
+    .filter_btn_block {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 5px 0px 0px;
+    }
+
+    .filter_btn {
+        display: block;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+
+    }
+
+    #sort {
+        width: 100%;
+        padding: 0;
+    }
+
+    .filter_open {
+        width: 100%;
+        margin: 5px;
+    }
+
+    .filter_layout_vision {
+        width: 100%;
+        height: auto;
+    }
+
+    .filter_title span {
+        font-size: 16px;
+        padding: 16px;
+
+    }
+    .filter__slider_bed{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+    .bed_value{
+        width: 100%;
+    }
+    .filter__slider_bath{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .bath_value{
+        width: 100%;
+    }
+    .minPrice{
+        margin-right: 10px;
+    }
+    .filter_layout_vision{
+        padding:10px;
+    }
+
+    .submit_slider{
+        z-index: 2323;
+    }
+
+
+}
+.submit_slider{
+    z-index: 2323;
+
+}
+.valArea{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.check{
+    display: none;
+    margin-bottom: 10px;
+    width: 3%;
+
+}
+
+
+@media (min-width: 1450px){
+    .data{
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+
+    }
+    .data span{
+        font-size: 20px;
+    }
+    .data_card_img img{
+        height: 250px;
+    }
+    #filter_data {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        padding: 0px 50px 0px 50px;
+
+        /* Добавляем отступы между элементами */
+    }
+}
+@media (min-width: 1650px){
+    .data{
+        width: 100%;
+    }
+    .data span{
+        font-size: 30px;
+    }
+    .data_card_img img{
+        height: 250px;
+    }
+    #filter_data {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        padding: 100px;
+
+        /* Добавляем отступы между элементами */
+    }
+}
+@media (min-width: 1760px){
+    .data{
+        width: 100%;
+    }
+    .data span{
+        font-size: 30px;
+    }
+    .data_card_img img{
+        height: 300px;
+    }
+    #filter_data {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        padding: 50px;
+
+        /* Добавляем отступы между элементами */
+    }
+}
+@media (min-width: 1800px){
+    .data{
+        width: 100%;
+    }
+    .data span{
+        font-size: 20px;
+    }
+    .data_card_img img{
+        height: 300px;
+    }
+    #filter_data {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        padding: 130px;
+
+        /* Добавляем отступы между элементами */
+    }
+
+}
+
+
+@media (min-width: 1950px){
+    .data{
+        width: 100%;
+    }
+    .data span{
+        font-size: 20px;
+    }
+    .data_card_img img{
+        height: 200px;
+    }
+    #filter_data {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        padding: 50px;
+
+        /* Добавляем отступы между элементами */
+    }
+}
+@media (min-width: 2000px) {
+
+    .data{
+        width: 100%;
+    }
+    .data span{
+        font-size: 40px;
+    }
+    .data_card_img img{
+        height: 300px;
+    }
+}
+@media (min-width: 2200px) {
+    .data{
+        width: 100%;
+    }
+    .data span{
+        font-size: 40px;
+    }
+    .data_card_img img{
+        height: 450px;
+    }
+}
+@media (min-width: 2000px) {
+    .data{
+        width: 100%;
+    }
+    .data span{
+        font-size: 40px;
+    }
+    .data_card_img img{
+        height: 500px;
+    }
+}
+@media (min-width: 2200px) {
+    .data{
+        width: 100%;
+    }
+    .data span{
+        font-size: 40px;
+    }
+    .data_card_img img{
+        height: 500px;
+    }
+}
+@media (min-width: 2300px) {
+    .data{
+        width: 100%;
+    }
+    .data span{
+        font-size: 40px;
+    }
+    .data_card_img img{
+        height: 500px;
+    }
+}
+@media (min-width: 2400px) {
+    .data{
+        width: 100%;
+    }
+    .data span{
+        font-size:25px;
+    }
+    .data_card_img img{
+        height: 500px;
+    }
+}
+@media (min-width: 2500px) {
+    .data{
+        width: 100%;
+    }
+    .data span{
+        font-size: 25px;
+    }
+    .data_card_img img{
+        height: 400px;
+    }
+    #filter_data {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        padding: 150px;
+
+        /* Добавляем отступы между элементами */
+    }
+}
+@media (min-width: 2700px) {
+    .data{
+        width: 100%;
+    }
+    .data span{
+        font-size: 20px;
+    }
+    .data_card_img img{
+        height: 500px;
+    }
+    #filter_data {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 100%;
+        padding: 100px;
+
+        /* Добавляем отступы между элементами */
+    }
+}
+
+@media (max-width:767px){
+    #filter_data{
+        grid-template-columns: 1fr;
+        width:100%;
+        gap: 1px;
+        padding: 20px;
+    }
+    .data{
+        margin: 0;
+    }
+    #filter_data img{
+        width:100%;
+        height: auto;
+    }
+
+    .submit_slider{
+        position: sticky; /* Зафіксуйте кнопку */
+        display: flex;
+        bottom: -15px; /* Відступ від низу */
+        z-index: 100; /* Гарантуйте, що кнопка завжди знаходиться зверху */
+        background-color: white;
+
+
+
+    }
+
+
+}
+
+
+/**Pagination**/
+.next-page{
+    display: none;
+}
+.previous-page{
+    display: none;
+}
+
+.current-page.active .page-link {
+    background-color: #001A72;
+}
+.current-page .page-link {
+    color: #001A72;
+    border-color: #001A72;
+}

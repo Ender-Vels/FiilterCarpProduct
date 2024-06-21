@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/Slider.js">
+    <!--Plugin CSS file with desired skin-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--Plugin JavaScript file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script type="text/javascript" src="/js/data.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</head>
+<div class="filter-container ">
+<div class="filter">
+    <div class="filter_layout">
+        <div class="filter_layout_vision">
+            <div class="filter_layout_vision_block">
+                <div class="close_filter">
+                    <div class="fs-1 fw-bold">Filters</div>
+                    <button class="filter_close  ">X</button>
+                </div>
+                <div class="filter_positions">
+                    <div class="filter_parameters">
+                        <div class="filter_area">
+                            <div class="filter_area_title">
+                                <span>Filter By Area</span>
+                            </div>
+                            <div class="filter_slider">
+                                <div class="Filter_Type container-fluid">
+                                    <div class="dropBtn">
+
+                                        <button class="dropAreaBtn"><span>All</span> <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2716%27 height=%2716%27 fill=%27none%27%3E%3Cpath stroke=%27%23000%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m4 6 4 4 4-4%27/%3E%3C/svg%3E" alt="arrow"> </button>
+
+                                    </div>
+                                    <div class="DropArea">
+                                        <button class="DropValueArea" type="button"><span class="val">All</span>
+                                            <img class="check" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Purple_check.svg" height="15px" alt="check">
+                                        </button>
+
+                                        <button class="DropValueArea" type="button" value="La Mer">
+                                            <span class="val">La Mer</span>
+                                            <img class="check" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Purple_check.svg" height="15px" alt="check">
+                                        </button>
+
+                                        <button class="DropValueArea" type="button" value="Palm Jumeirah">
+                                            <span class="val">Palm Jumeirah</span>
+                                            <img class="check" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Purple_check.svg" height="15px" alt="check">
+                                        </button>
+
+                                        <button class="DropValueArea" type="button" value="Mohammed Bin Rashid City">
+                                            <span class="val">Mohammed Bin Rashid City</span>
+                                            <img class="check" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Purple_check.svg" height="15px" alt="check">
+                                        </button>
+
+                                        <button class="DropValueArea" type="button" value="Business Bay">
+                                            <span class="val">Business Bay</span>
+                                            <img class="check" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Purple_check.svg" height="15px" alt="check">
+                                        </button>
+
+                                        <button class="DropValueArea" type="button" value="Jumeirah Beach Residence">
+                                            <span class="val">Jumeirah Beach Residence"</span>
+                                            <img class="check" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Purple_check.svg" height="15px" alt="check">
+                                        </button>
+
+                                        <button class="DropValueArea" type="button" value="Downtown">
+                                            <span class="val">Downtown</span>
+                                            <img class="check" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Purple_check.svg" height="15px" alt="check">
+                                        </button>
+                                        <button class="DropValueArea" type="button" value="Dubai Marina">
+                                            <span class="val">Dubai Marina</span>
+                                            <img class="check" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Purple_check.svg" height="15px" alt="check">
+                                        </button>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+
+                        </div>
+                        <div class="filter_type">
+                            <div class="filter_area_title">
+                                <span>Filter By Type</span>
+                            </div>
+                            <div class="Filter_Type container-fluid">
+                                <div class="dropBtn">
+
+                                    <button class="drop"><span class="val">All</span> <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2716%27 height=%2716%27 fill=%27none%27%3E%3Cpath stroke=%27%23000%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27m4 6 4 4 4-4%27/%3E%3C/svg%3E" alt="arrow"> </button>
+
+                                </div>
+                                <div class="Drop">
+                                    <button class="DropValue" type="button" value="All"><span class="val">All</span>
+                                        <img class="check" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Purple_check.svg" height="15px" alt="check">
+                                    </button>
+                                    <button class="DropValue" type="button" value="Villa"><span class="val">Villa</span>
+                                        <img class="check" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Purple_check.svg" height="15px" alt="check">
+
+                                    </button>
+                                    <button class="DropValue" type="button" value="Apartment"><span class="val">Apartment</span>
+                                        <img class="check" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Purple_check.svg" height="15px" alt="check">
+                                    </button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="filter_beds">
+                            <div class="filter_title_beds">
+                                <span>Beds</span>
+                            </div>
+                            <div class="filter__slider_bed">
+                                <button class="bed_value first active" data-val='0'>Any</button>
+                                <button class="bed_value " data-val='1'>1+</button>
+                                <button class="bed_value " data-val='2'>2+</button>
+                                <button class="bed_value " data-val='3'>3+</button>
+                                <button class="bed_value " data-val='4'>4+</button>
+                                <button class="bed_value last " data-val='5'>5+</button>
+                            </div>
+
+                        </div>
+                        <div class="filter_bath">
+                            <div class="filter_title_bath">
+                                <span>Bath</span>
+                            </div>
+                            <div class="filter__slider_bath">
+                                <button class="bath_value first active" data-val='0'>Any</button>
+                                <button class="bath_value " data-val='1'>1+</button>
+                                <button class="bath_value " data-val='2'>2+</button>
+                                <button class="bath_value " data-val='3'>3+</button>
+                                <button class="bath_value " data-val='4'>4+</button>
+                                <button class="bath_value last" data-val='5'>5+</button>
+                            </div>
+                        </div>
+                        <div class="filter_price">
+                            <div class="filter_slider">
+                                <div class="priceMinMax">
+                                    <span class="minPrice"><$<span class="minPriceValue">100000</span></span>
+                                    <span class="maxPrice">$<span class="maxPriceValue">20000000</span>+</span>
+                                </div>
+
+                                <input type="text" class="price_slider form-control" data-type="double" data-min="100000" data-max="20000000" data-from="100000" data-to="20000000" name="price-slider" value="">
+                            </div>
+                        </div>
+                        <div class="filter_Sq">
+                            <div class="filter_slider">
+                                <div class="priceMinMax">
+                                    <span class="minPriceSq"><<span class="minPriceValueSQ">500</span>Sq.Ft.</span>
+                                    <span class="maxPriceSq"><span class="maxPriceValueSQ">10000</span>+Sq.Ft.</span>
+                                </div>
+                                <input type="text" class="sq_slider form-control" data-type="double" data-min="500" data-max="10000" data-from="0" data-to="10000" name="sq-slider" value="">
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="submit_slider">
+                            <button class="reset ">Reset filters <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2720%27 height=%2720%27 fill=%27none%27%3E%3Cpath stroke=%27%23000%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27M17.044 10.744a7.083 7.083 0 0 1-13.179 2.798l-.208-.361m-.702-3.925a7.083 7.083 0 0 1 13.179-2.798l.209.361M2.91 15.055l.61-2.277 2.277.61m8.404-6.776 2.277.61.61-2.277%27/%3E%3C/svg%3E" alt="reset"></button>
+                            <button class="submit ">Submit <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/White_check.svg"  alt="submit"> </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+<body>
+
+
+
+<div id="filter_datas" class="block">
+<div  class="data_block">
+    <div class="filter_btn_block dt">
+        <div class="filter_title">
+            <span> SIGNATURE HOMES</span>
+        </div>
+        <div class="filter_btn">
+            <select class=" filt " name="sort" id="sort">
+                <option  value="0" selected="selected">Filter by Price</option>
+                <option  value="1">All</option>
+                <option  value="2" data-tooltip="Sort from highest to lowest">The highest for the price</option>
+                <option  value="3" data-tooltip="Sort from lowest to highest">The lowest for the price</option>
+            </select>
+            <button class="filter_open">Filters <img src="https://cdn-icons-png.flaticon.com/128/1077/1077333.png" height="20px" alt="params"> </button>
+        </div>
+    </div>
+
+
+
+
+    <div id="filter_data">
+
+    </div>
+
+
+
+    <div id="pagination" class="pagination justify-content-center">
+
+        <li class="page-item previous-page disable">
+            <a class="page-link" href="#filter_datas">Prev</a>
+        </li>
+        <li class="page-item current-page active">
+            <a class="page-link" href="#pagination">1</a>
+        </li>
+        <li class="page-item current-page ">
+            <a class="page-link" href="#pagination">2</a>
+        </li>
+        <li class="page-item current-page active">
+            <a class="page-link" href="#pagination">3</a>
+        </li>
+
+        <li class="page-item dots">
+            <a class="page-link" href="#">...</a>
+        </li>
+        <li class="page-item current-page">
+            <a class="page-link" href="#pagination">5</a>
+        </li>
+        <li class="page-item current-page">
+            <a class="page-link" href="#pagination">6</a>
+        </li>
+        <li class="page-item dots">
+            <a class="page-link" href="#">...</a>
+        </li>
+        <li class="page-item current-page">
+            <a class="page-link" href="#pagination">10</a>
+        </li>
+        <li class="page-item next-page">
+            <a class="page-link" href="#pagination">Next</a>
+        </li>
+
+    </div>
+
+</div>
+</div>
+<style>
+    .irs--big .irs-single{
+        background: none;
+        color: #001A72;
+        font-size: 13px;
+        font-weight: bold;
+        display: block;
+        position: absolute;
+        margin-bottom: 20px;
+        bottom: 5px;
+
+
+    }
+    .irs--big .irs-from{
+        display: none;
+    }
+    .irs--big .irs-to{
+        display: none;
+    }
+
+    .irs--big{
+        border:none;
+    }
+    .irs-with-grid .irs-grid{
+        display: none;
+    }
+    .irs--big .irs-line{
+        height: 0px;
+        background: rgb(0,26,114,1);
+        border: 0.5px solid rgb(0,26,114,1);
+
+    }
+    .irs--big .irs-bar{
+        height: 5px;
+        background: rgb(0,26,114,1);
+    }
+    .irs--big .irs-handle{
+        top:15px;
+        height: 40px;
+        width: 40px;
+        border: none;
+        background: rgb(0, 26, 114, 1) url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2716%27 height=%2716%27 fill=%27none%27%3E%3Cpath stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27M6 4.667 2.667 8 6 11.333m4-6.667L13.333 8 10 11.333%27/%3E%3C/svg%3E") no-repeat center;
+
+
+    }
+
+    .irs--big .irs-handle:hover{
+        background: rgb(35, 71, 191) url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2716%27 height=%2716%27 fill=%27none%27%3E%3Cpath stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27M6 4.667 2.667 8 6 11.333m4-6.667L13.333 8 10 11.333%27/%3E%3C/svg%3E") no-repeat center;
+    }
+    .irs--big .irs-handle:active{
+        background: rgb(35, 71, 191) url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2716%27 height=%2716%27 fill=%27none%27%3E%3Cpath stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27M6 4.667 2.667 8 6 11.333m4-6.667L13.333 8 10 11.333%27/%3E%3C/svg%3E") no-repeat center;
+
+    }
+    .irs--big .irs-handle:focus{
+        background: rgb(35, 71, 191) url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2716%27 height=%2716%27 fill=%27none%27%3E%3Cpath stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%272%27 d=%27M6 4.667 2.667 8 6 11.333m4-6.667L13.333 8 10 11.333%27/%3E%3C/svg%3E") no-repeat center;
+
+    }
+
+    .irs--big .irs-min, .irs--big .irs-max{
+        display: none;
+    }
+
+
+
+</style>
+
+
+<!--JQUERY-->
+
+<script>
+
+
+
+    //active button BED and BATH
+
+    $(document).on('click', '.bed_value', function() {
+        // Отримати значення кнопки
+        let val = $(this).data('val');
+
+        // Якщо кнопка вже активна, деактивувати її
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            bed = undefined; // Скинути значення фільтра
+        } else {
+            // Деактивувати всі інші кнопки з класом "bed_value"
+            $('.bed_value').removeClass('active');
+
+            // Активувати поточну кнопку
+            $(this).addClass('active');
+            bed = val; // Встановити значення фільтра
+        }
+    });
+
+    // Обробка натискання на кнопки "bath_value"
+    $(document).on('click', '.bath_value', function() {
+        // Отримати значення кнопки
+        let val = $(this).data('val');
+
+        // Якщо кнопка вже активна, деактивувати її
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            bath = undefined; // Скинути значення фільтра
+        } else {
+            // Деактивувати всі інші кнопки з класом "bath_value"
+            $('.bath_value').removeClass('active');
+
+            // Активувати поточну кнопку
+            $(this).addClass('active');
+            bath = val; // Встановити значення фільтра
+        }
+    });
+
+    //EnD
+
+
+    //Get Price Slider
+    $('.price_slider').ionRangeSlider({
+        skin: 'big',
+        type: "double",
+        min: 100000,
+        max: 20000000,
+        from: 100000,
+        to: 20000000,
+        step: 10000,
+        grid: true,
+        onChange:updateInputsPrice
+    });
+    // Get Sqt Slider
+    $('.sq_slider').ionRangeSlider({
+        skin: 'big',
+        type: "double",
+        min: 500,
+        max: 10000,
+        from: 500,
+        to: 10000,
+        step:500,
+        grid: true,
+        onChange:updateInputsSq,
+
+    })
+    let minSq;
+    let maxSq;
+
+    let minPrice;
+    let maxPrice;
+
+    let bed;
+    let bath;
+
+    let selectedAreas = [];
+    let selectedTypes = [];
+
+    function updateInputsPrice (data) {
+        from = data.from;
+        to = data.to;
+        minPrice=from;
+        maxPrice=to;
+        if(minPrice==maxPrice){
+            $('.minPrice').html(``)
+            $('.maxPrice').html(`  <span class="minPrice"><$<span class="minPriceValue">${minPrice}</span></span>`)
+        }
+        else {
+            $('.minPrice').html(`  <span class="minPrice"><$<span class="minPriceValue">${minPrice} </span></span>`)
+            $('.maxPrice').html(`  <span class="minPrice">$<span class="maxPriceValue">${maxPrice}</span></span>`)
+
+        }
+
+    }
+
+    function updateInputsSq (data) {
+        from = data.from;
+        to = data.to;
+        minSq = from
+        maxSq = to
+        if(minSq===maxSq){
+            $('.minPriceSq').html(``)
+            $('.maxPriceSq').html(`  <span class="minPriceSq"><<span class="minPriceValueSq">${minSq}</span>Sq.Ft.</span>`)
+        }
+        else {
+            $('.minPriceSq').html(`  <span class="minPriceSq"><span class="minPriceValueSQ"><${minSq} </span>Sq.Ft.</span>`)
+            $('.maxPriceSq').html(`  <span class="minPriceSq"><span class="maxPriceValueSQ">${maxSq}</span>+Sq.Ft.</span>`)
+
+        }
+
+    }
+
+    let price = $('.price_slider').data("ionRangeSlider")
+    let sq = $('.sq_slider').data("ionRangeSlider")
+    function resetInput(){
+        price.reset()
+        sq.reset()
+    }
+
+
+
+
+
+    function SetFilter(){
+        let filter = {
+            minPriceValue:minPrice,
+            maxPriceValue:maxPrice,
+            minSqValue:minSq,
+            maxSqValue:maxSq,
+            bedValue:bed,
+            bathValue: bath,
+            Area:selectedAreas,
+            Type:selectedTypes,
+            setValue(){
+             if(this.minPriceValue == undefined){
+                 this.minPriceValue = 100000
+             }
+                if(this.maxPriceValue == undefined){
+                    this.maxPriceValue = 20000000
+                }
+                if(this.minSqValue == undefined){
+                    this.minSqValue = 500
+                }
+                if(this.maxSqValue == undefined){
+                    this.maxSqValue = 10000
+                }
+                if(this.bedValue == undefined){
+                    this.bedValue = 0
+                }
+                if(this.bathValue == undefined){
+                    this.bathValue = 0
+                }
+                if(this.Area.length == 0){
+                    this.Area="All"
+                }
+                if(this.Type.length == 0){
+                    this.Type="All"
+                }
+
+
+
+            },
+        }
+        filter.setValue()
+        filters = filter
+    }
+
+    let filters;
+    let FT;
+
+
+    $(document).on("DOMContentLoaded",function (){
+        renders(data)
+
+    })
+
+
+        $('.filter_close').on('click',function (){
+        $('.filter-container').hide('slow')
+         })
+
+
+
+    $('.filter_open').on('click',function (){
+        $('.filter-container').show('slow')
+    })
+
+    let FiltData;
+
+    /***PAGINATION***/
+
+    function getPageList(totalPages, page, maxLength) {
+        function range(start, end) {
+            return Array.from(Array(end - start + 1), (_, i) => i + start);
+        }
+
+        var sideWidth = maxLength < 9 ? 1 : 2;
+        var leftWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+        var rightWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+
+
+        if (totalPages <= maxLength) {
+            return range(1, totalPages);
+        }
+
+
+        if (page <= maxLength - sideWidth - 1 - rightWidth) {
+            return range(1, maxLength - sideWidth - 1).concat(0, range(totalPages - sideWidth + 1, totalPages));
+        }
+
+
+        if (page >= totalPages - sideWidth - 1 - rightWidth) {
+            return range(1, sideWidth).concat(0, range(totalPages - sideWidth - 1 - rightWidth - leftWidth, totalPages));
+        }
+
+
+        return range(1, sideWidth).concat(0, range(page - leftWidth, page + rightWidth), 0, range(totalPages - sideWidth + 1, totalPages));
+
+    }
+
+    $(function() {
+        var numberOfItems = $(".data .data_card").length;
+        var limitPerPage = 9; //No. of cards to show per page
+        var totalPages = Math.ceil(numberOfItems / limitPerPage);
+        var paginationSize = 5; //pagination items to show
+        var currentPage;
+        $(".pagination li").slice(1, -1).remove();
+
+        // Логика отображения страниц
+        if (totalPages <= paginationSize) {
+            // Если количество страниц меньше, чем размер пагинации, отображаем все
+            for (let i = 1; i <= totalPages; i++) {
+                $("<li>").addClass("page-item").addClass("current-page")
+                    .toggleClass("active", i === currentPage)
+                    .append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text(i))
+                    .insertBefore(".next-page");
+            }
+        } else {
+            // Иначе отображаем первые 3 страницы, троеточие и последнюю страницу
+            for (let i = 1; i <= 3; i++) {
+                $("<li>").addClass("page-item").addClass("current-page")
+                    .toggleClass("active", i === currentPage)
+                    .append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text(i))
+                    .insertBefore(".next-page");
+            }
+            $("<li>").addClass("page-item").addClass("dots")
+                .append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text("..."))
+                .insertBefore(".next-page");
+            $("<li>").addClass("page-item").addClass("current-page")
+                .toggleClass("active", totalPages === currentPage)
+                .append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text(totalPages))
+                .insertBefore(".next-page");
+        }
+
+
+        function showPage(whichPage) {
+            if (whichPage < 1 || whichPage > totalPages) return false;
+
+            currentPage = whichPage;
+
+            $(".data .data_card").hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
+
+            $(".pagination li").slice(1, -1).remove();
+
+            getPageList(totalPages, currentPage, paginationSize).forEach(item => {
+                $("<li>").addClass("page-item").addClass(item ? "current-page" : "dots").toggleClass("active", item === currentPage).append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text(item || "...")).insertBefore(".next-page");
+            });
+
+            $(".previous-page").toggleClass("disable", currentPage === 1);
+            $(".next-page").toggleClass("disable", currentPage === totalPages);
+            return true;
+        }
+        $('.reset').on('click',function(){
+            FiltData=undefined
+            $("#sort").val("0");
+            resetInput()
+            renders(data)
+            showPage(1)
+            $('.bed_value, .bath_value').removeClass('active');
+            $('.minPriceValue').text(`100000`)
+            $('.maxPriceValue').text(`20000000`)
+            $('.minPriceValueSQ').text(`500`)
+            $('.maxPriceValueSQ').text(`10000`)
+
+            // Скинути значення фільтрів
+            bed = 0;
+            bath = 0;
+            $('.dropAreaBtn span').text("All")
+            $('.drop span').text("All")
+            selectedAreas=[]
+            selectedTypes=[]
+
+
+            if($('.dropAreaBtn').hasClass('active')){
+                $('.dropAreaBtn').removeClass('active')
+                $(".DropArea").css({
+                    'border': '0.5px solid lightgrey',
+                    'margin-top': '5px',
+                    'border-radius': '5px',
+                    'height' : '0px',
+                    'overflow': 'hidden',
+                    'display': 'none',
+                })
+            }
+
+            if($('.drop').hasClass('active')){
+                $('.drop').removeClass('active')
+                $(".Drop").css({
+                    'border': '0.5px solid lightgrey',
+                    'margin-top': '5px',
+                    'border-radius': '5px',
+                    'height' : '0px',
+                    'overflow': 'hidden',
+                    'display': 'none',
+                })
+            }
+
+            $('.DropValueArea').each(function (){
+                if($(this).hasClass('active')){
+                    $(this).removeClass('active').css({
+                        'color':'rgb(8, 58, 130)'
+                    })
+                    $(this).children('.check').hide()
+                    selectedAreas.splice($(this).children('.val').text())
+
+                }
+            })
+            $('.DropValue').each(function (){
+                if($(this).hasClass('active')){
+                    $(this).removeClass('active').css({
+                        'color':'rgb(8, 58, 130)'
+                    })
+                    $(this).children('.check').hide()
+                    selectedAreas.splice($(this).children('.val').text())
+
+                }
+            })
+
+        })
+
+        $('.submit').on('click',function(){
+
+            SetFilter(); // Update filters object with current values
+            console.log(filters)
+            render(data,filters);
+            $('.filter-container').hide('slow');
+            showPage(1); // Reset to page 1
+            $("#sort").val("0");
+
+
+
+        });
+
+
+
+
+        function showPageUpdate(page, data) {
+            if (page < 1 || page > Math.ceil(data.length / limitPerPage)) return false;
+
+            let start = (page - 1) * limitPerPage;
+            let end = page * limitPerPage;
+
+            $(".data .data_card").hide().slice(start, end).show();
+
+            $(".pagination li").slice(1, -1).remove();
+
+            getPageList(Math.ceil(data.length / limitPerPage), page, paginationSize).forEach(item => {
+                $("<li>").addClass("page-item").addClass(item ? "current-page" : "dots").toggleClass("active", item === page).append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text(item || "...")).insertBefore(".next-page");
+            });
+
+            $(".previous-page").toggleClass("disable", page === 1);
+            $(".next-page").toggleClass("disable", page === Math.ceil(data.length / limitPerPage));
+            return true;
+        }
+
+
+
+        /**Sorted**/
+        $("#sort").on("change", function () {
+            if (FiltData==undefined || FiltData=='') {
+                let selectedValue = $(this).val();
+                let filteredData = [...data];
+
+                if (selectedValue === '2') {
+                    filteredData.sort((a, b) => b.price - a.price);
+                } else if (selectedValue === '3') {
+                    filteredData.sort((a, b) => a.price - b.price);
+                }
+
+                // Рендеринг відсортованих даних
+                rendersFilterByPrice(filteredData);
+                showPageUpdate(1, filteredData);
+            }
+            else if(FiltData!=undefined || FiltData!=''){
+                let selectedValue = $(this).val();
+                let filteredData = [...FiltData];
+
+                if (selectedValue === '2') {
+                    filteredData.sort((a, b) => b.price - a.price);
+                } else if (selectedValue === '3') {
+                    filteredData.sort((a, b) => a.price - b.price);
+                }
+
+                // Рендеринг відсортованих даних
+                rendersFilterByPrice(filteredData);
+                showPageUpdate(1, filteredData);
+            }
+        });
+
+
+            /////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+        /**End Sorted**/
+
+
+
+        $(".pagination").append(
+            $("<li>").addClass("page-item").addClass("previous-page").append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text("Prev")),
+            $("<li>").addClass("page-item").addClass("next-page").append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text("Next"))
+        );
+
+
+
+        $(".card-content").show();
+        showPage(1);
+
+
+        $(document).on("click", ".pagination li.current-page:not(.active)", function() {
+            return showPage(+$(this).text());
+        });
+
+        $(document).on("click", ".pagination li.current-page:not(.active)", function() {
+            const pageNumber = +$(this).text(); // Отримати номер сторінки
+            showPage(pageNumber); // Відтворити сторінку
+            $('html, body').animate({ scrollTop: 500 }, 'swing'); // Прокрутити до верху
+        });
+        const paginationLinks = document.querySelectorAll('.page-link');
+        const paginationNumbers = document.querySelectorAll('.pagination li');
+
+        paginationLinks.forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                const pageNumber = link.getAttribute('data-page');
+                // Scroll to the top of the page smoothly
+                $('html, body').animate({scrollTop: 0}, 'swing');
+            });
+        });
+
+        paginationNumbers.forEach(number => {
+            number.addEventListener('click', event => {
+                event.preventDefault();
+                // Scroll to the top of the page smoothly
+                $('html, body').animate({scrollTop: 500}, 'swing');
+            });
+        });
+
+
+
+        $(".next-page").on("click", function() {
+            return showPage(currentPage + 1);
+
+
+        });
+
+
+
+        $(".previous-page").on("click", function() {
+
+            return showPage(currentPage - 1);
+
+        })
+
+
+
+    });
+
+    /**Dropdown**/
+    $('.drop').on('click',function (){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active')
+        }
+        else{
+            $(this).addClass('active')
+        }
+
+        //Drop
+        if($(this).hasClass('active')){
+            $('.Drop').css({
+                'transition': 'all 1s linear',
+                'display': 'block',
+                'height': '100%'
+            })
+        }
+        else {
+            $(".Drop").css({
+                'border': '0.5px solid lightgrey',
+                'margin-top': '5px',
+                'border-radius': '5px',
+                'height' : '0px',
+                'overflow': 'hidden',
+                'display': 'none',
+            })
+        }
+    })
+
+
+
+    $('.dropAreaBtn').on('click',function (){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active')
+
+        }
+        else{
+            $(this).addClass('active')
+
+
+        }
+
+        //Drop
+        if($(this).hasClass('active')){
+            $('.DropArea').css({
+                'transition': 'all 1s linear',
+                'display': 'block',
+                'height': '100%'
+            })
+        }
+        else {
+            $(".DropArea").css({
+                'border': '0.5px solid lightgrey',
+                'margin-top': '5px',
+                'border-radius': '5px',
+                'height' : '0px',
+                'overflow': 'hidden',
+                'display': 'none',
+            })
+        }
+    })
+
+    $('.DropValueArea').on('click', function() {
+        const clickedValue = $(this).children('.val').text();
+        const index = selectedAreas.indexOf(clickedValue);
+
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active')
+                .css({
+                    'color': 'rgb(8, 58, 130)'
+                })
+            $(this).children('.check').hide()
+            if (index!== -1) {
+                selectedAreas.splice(index, 1);
+            }
+            console.log(selectedAreas)
+
+            if (selectedAreas.length === 0) {
+                $('.dropAreaBtn span').text('All');
+            } else if (selectedAreas.length === 1) {
+                $('.dropAreaBtn span').text(`${selectedAreas[0]}`);
+            } else {
+                $('.dropAreaBtn span').text(`${selectedAreas[0]} + ${selectedAreas.length - 1}`);
+            }
+        } else {
+            $(this).addClass('active').css({
+                'color': 'purple'
+            })
+            $(this).children('.check').show()
+            selectedAreas.push(clickedValue)
+            if (selectedAreas.length === 1) {
+                $('.dropAreaBtn span').text(`${selectedAreas[0]}`);
+            } else {
+                $('.dropAreaBtn span').text(`${selectedAreas[0]} + ${selectedAreas.length - 1}`);
+            }
+            console.log(selectedAreas)
+        }
+    })
+
+
+    $('.DropValue').on('click', function() {
+        const clickedValue = $(this).children('.val').text();
+        const index = selectedTypes.indexOf(clickedValue);
+
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active')
+                .css({
+                    'color': 'rgb(8, 58, 130)'
+                })
+            $(this).children('.check').hide()
+            if (index!== -1) {
+                selectedTypes.splice(index, 1);
+            }
+
+            if (selectedTypes.length === 0) {
+                $('.drop span').text('All');
+            } else if (selectedTypes.length === 1) {
+                $('.drop span').text(`${selectedTypes[0]}`);
+            } else {
+                $('.drop span').text(`${selectedTypes[0]} + ${selectedTypes.length - 1}`);
+            }
+        } else {
+            $(this).addClass('active').css({
+                'color': 'purple'
+            })
+            $(this).children('.check').show()
+            selectedTypes.push(clickedValue)
+            if (selectedTypes.length === 1) {
+                $('.drop span').text(`${selectedTypes[0]}`);
+            } else {
+                $('.drop span').text(`${selectedTypes[0]} + ${selectedTypes.length - 1}`);
+            }
+            console.log(selectedTypes)
+        }
+    })
+
+
+
+
+
+
+    //TODO: Зробити логіку вибору апартаментів
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+
+
+
+</body>
+</html>
